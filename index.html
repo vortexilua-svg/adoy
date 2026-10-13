@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Raffa Putra Pratama | TKJ & Fiber Optic Specialist</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#090d16',
+                        cardBg: '#111827',
+                        neonCyan: '#06b6d4',
+                        copper: '#d97706',
+                        copperLight: '#f59e0b',
+                    },
+                    boxShadow: {
+                        'neon-cyan': '0 0 25px rgba(6, 182, 212, 0.35)',
+                        'neon-copper': '0 0 25px rgba(217, 119, 6, 0.35)',
+                        'card-glow': '0 10px 30px -10px rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #090d16;
+            color: #f3f4f6;
+        }
+        .fiber-grid {
+            background-image: radial-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px), radial-gradient(rgba(217, 119, 6, 0.05) 1px, #090d16 1px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #06b6d4 0%, #38bdf8 50%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .copper-border {
+            border: 2px solid transparent;
+            background: linear-gradient(#111827, #111827) padding-box, linear-gradient(135deg, #06b6d4, #d97706) border-box;
+        }
+    </style>
+</head>
+<body class="fiber-grid min-h-screen font-sans selection:bg-neonCyan selection:text-darkBg">
+
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#home" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-amber-600 flex items-center justify-center text-white font-bold text-lg shadow-neon-cyan group-hover:scale-105 transition">
+                    RP
+                </div>
+                <div>
+                    <span class="font-bold text-lg tracking-wide text-white block">Raffa Putra P.</span>
+                    <span class="text-xs text-cyan-400 font-medium">SMK 3 Perg. Cikini</span>
+                </div>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-sm font-medium text-gray-300 hover:text-cyan-400 transition">Beranda</a>
+                <a href="#about" class="text-sm font-medium text-gray-300 hover:text-cyan-400 transition">Tentang Saya</a>
+                <a href="#education" class="text-sm font-medium text-gray-300 hover:text-cyan-400 transition">Pendidikan</a>
+                <a href="#skills" class="text-sm font-medium text-gray-300 hover:text-cyan-400 transition">Keahlian</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium text-sm shadow-lg shadow-cyan-500/25 transition transform hover:-translate-y-0.5">Hubungi Saya</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none p-2 rounded-lg bg-gray-800/50">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-gray-800 px-6 py-6 space-y-4">
+            <a href="#home" class="block text-gray-300 hover:text-cyan-400 font-medium mobile-link">Beranda</a>
+            <a href="#about" class="block text-gray-300 hover:text-cyan-400 font-medium mobile-link">Tentang Saya</a>
+            <a href="#education" class="block text-gray-300 hover:text-cyan-400 font-medium mobile-link">Pendidikan</a>
+            <a href="#skills" class="block text-gray-300 hover:text-cyan-400 font-medium mobile-link">Keahlian</a>
+            <a href="#contact" class="block w-full text-center py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium mobile-link shadow-lg shadow-cyan-500/20">Hubungi Saya</a>
+        </div>
+    </header>
+
+    <section id="home" class="pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden relative">
+        <!-- Glow background accents -->
+        <div class="absolute top-1/4 left-10 w-72 h-72 bg-cyan-500/10 rounded-full filter blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-amber-600/10 rounded-full filter blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-500/30 text-cyan-400 text-xs font-semibold tracking-wider uppercase">
+                        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                        <span>SMK 3 Perguruan Cikini</span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Halo, Saya <br><span class="gradient-text">Raffa Putra Pratama</span>
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl text-amber-500/90 font-medium tracking-wide">
+                        TKJ Student | Fiber Optic Specialist - SMK 3 Perguruan Cikini
+                    </p>
+                    
+                    <p class="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Siswa aktif Jurusan Teknik Komputer dan Jaringan dengan antusiasme tinggi pada infrastruktur jaringan masa depan dan teknologi serat optik.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold shadow-neon-cyan transition transform hover:-translate-y-1 text-center">
+                            <i class="fa-solid fa-paper-plane mr-2"></i> Hubungi Saya
+                        </a>
+                        <a href="#about" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-card hover:bg-gray-800 text-gray-300 hover:text-white font-semibold transition border border-gray-700 text-center">
+                            <i class="fa-solid fa-user mr-2"></i> Kenali Saya
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Profile Picture with Custom Frame -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative group">
+                        <!-- Decorative glow ring -->
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-cyan-500 via-blue-500 to-amber-500 rounded-3xl blur-md opacity-70 group-hover:opacity-100 transition duration-500 animate-pulse"></div>
+                        
+                        <!-- Main container frame -->
+                        <div class="relative w-72 sm:w-80 h-80 sm:h-96 rounded-2xl overflow-hidden copper-border bg-gray-900 shadow-2xl flex items-center justify-center">
+                            <img src="adoy.jpeg" alt="Raffa Putra Pratama" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='https://placehold.co/400x500/111827/06b6d4?text=Raffa+Putra+Pratama';">
+                            
+                            <!-- Floating badge overlay -->
+                            <div class="absolute bottom-4 left-4 right-4 glass-card p-3 rounded-xl border border-white/10 backdrop-blur-md flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400">
+                                    <i class="fa-solid fa-network-wired text-lg"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 font-medium">Spesialisasi</p>
+                                    <p class="text-sm font-bold text-white">Fiber Optic & TKJ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 relative bg-gray-950/50 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-cyan-400 font-semibold text-sm uppercase tracking-wider">Profil Profesional</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Tentang Saya</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyan-500 to-amber-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-5">
+                    <div class="glass-card p-8 rounded-3xl border border-gray-800 relative overflow-hidden shadow-card-glow">
+                        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-cyan-500/10 rounded-full filter blur-2xl"></div>
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                            <i class="fa-solid fa-graduation-cap text-cyan-400 mr-3"></i> Informasi Singkat
+                        </h3>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start justify-between border-b border-gray-800 pb-3">
+                                <span class="text-gray-400 font-medium">Nama Lengkap</span>
+                                <span class="text-white font-semibold text-right">Raffa Putra Pratama</span>
+                            </li>
+                            <li class="flex items-start justify-between border-b border-gray-800 pb-3">
+                                <span class="text-gray-400 font-medium">Sekolah</span>
+                                <span class="text-cyan-400 font-semibold text-right">SMK 3 Perguruan Cikini</span>
+                            </li>
+                            <li class="flex items-start justify-between border-b border-gray-800 pb-3">
+                                <span class="text-gray-400 font-medium">Jurusan</span>
+                                <span class="text-white font-semibold text-right">Teknik Komputer & Jaringan</span>
+                            </li>
+                            <li class="flex items-start justify-between">
+                                <span class="text-gray-400 font-medium">Minat Utama</span>
+                                <span class="text-amber-400 font-semibold text-right">Fiber Optic Infrastructure</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="glass-card p-8 sm:p-10 rounded-3xl border border-gray-800 shadow-card-glow relative">
+                        <div class="absolute top-0 right-0 px-6 py-2 bg-gradient-to-l from-cyan-500/20 to-transparent rounded-bl-3xl text-cyan-400 font-semibold text-xs tracking-wider uppercase">
+                            About Me
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-6">Mengenal Raffa Lebih Dekat</h3>
+                        <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                            "Saya adalah siswa jurusan Teknik Komputer dan Jaringan (TKJ) di SMK 3 Perguruan Cikini. Saya memiliki fokus keahlian dan minat khusus di bidang Fiber Optic, termasuk pemahaman dasar infrastruktur kabel serat optik, penyambungan (splicing), serta pengoperasian perangkat jaringan berbasis kabel optik."
+                        </p>
+                        <p class="text-gray-400 leading-relaxed">
+                            Dengan semangat belajar yang tinggi dan latihan praktik di laboratorium jaringan sekolah, saya berkomitmen untuk terus mengasah kemampuan teknis agar siap menghadapi tantangan di industri telekomunikasi dan jaringan modern.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-500 font-semibold text-sm uppercase tracking-wider">Latar Belakang Akademik</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Pendidikan</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-amber-500 to-cyan-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="glass-card p-8 sm:p-10 rounded-3xl border border-cyan-500/30 relative shadow-neon-cyan overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-full filter blur-2xl group-hover:bg-cyan-500/20 transition"></div>
+                    
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
+                        <div class="flex items-start space-x-5">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-cyan-500 to-amber-500 flex items-center justify-center text-white text-2xl shadow-lg shrink-0">
+                                <i class="fa-solid fa-school"></i>
+                            </div>
+                            <div>
+                                <span class="px-3 py-1 rounded-full bg-cyan-950 text-cyan-400 text-xs font-semibold inline-block mb-2">Pendidikan Saat Ini</span>
+                                <h3 class="text-2xl font-bold text-white">SMK 3 Perguruan Cikini</h3>
+                                <p class="text-cyan-400 font-medium text-lg mt-1">Teknik Komputer dan Jaringan (TKJ)</p>
+                                <p class="text-gray-400 text-sm mt-2">Fokus studi mendalam pada arsitektur jaringan komputer, sistem operasi jaringan, troublshooting perangkat keras/lunak, dan spesialisasi infrastruktur Fiber Optic.</p>
+                            </div>
+                        </div>
+                        <div class="shrink-0 text-right md:border-l md:border-gray-800 md:pl-8">
+                            <span class="text-sm text-gray-400 block font-medium">Status</span>
+                            <span class="text-green-400 font-bold inline-flex items-center mt-1">
+                                <span class="w-2 h-2 rounded-full bg-green-400 mr-2 animate-ping"></span> Siswa Aktif
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 relative bg-gray-950/50 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-cyan-400 font-semibold text-sm uppercase tracking-wider">Kompetensi Keahlian</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Keahlian & Spesialisasi</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyan-500 to-amber-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Skill Card 1 -->
+                <div class="glass-card p-8 rounded-3xl border border-gray-800 hover:border-cyan-500/50 transition duration-300 shadow-card-glow group">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-xl group-hover:bg-cyan-500 group-hover:text-white transition duration-300">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-cyan-400 font-semibold uppercase">Infrastruktur</span>
+                            <h3 class="text-xl font-bold text-white">Fiber Optic & Infrastructure Basics</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Pemahaman mendalam mengenai struktur kabel serat optik (Single-Mode & Multi-Mode), jalur distribusi kabel udara/tanam, serta perangkat pendukung seperti ODF, ODP, dan Splicer.
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-lg bg-gray-900 text-cyan-400 text-xs font-medium border border-gray-800">Single-Mode</span>
+                        <span class="px-3 py-1 rounded-lg bg-gray-900 text-cyan-400 text-xs font-medium border border-gray-800">ODP / ODF</span>
+                        <span class="px-3 py-1 rounded-lg bg-gray-900 text-cyan-400 text-xs font-medium border border-gray-800">Infrastruktur Jaringan</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="glass-card p-8 rounded-3xl border border-gray-800 hover:border-amber-500/50 transition duration-300 shadow-card-glow group">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-500 text-xl group-hover:bg-amber-500 group-hover:text-white transition duration-300">
+                            <i class="fa-solid fa-toolbox"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-amber-500 font-semibold uppercase">Teknis & Praktik</span>
+                            <h3 class="text-xl font-bold text-white">Fiber Splicing & Termination</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Keahlian dalam proses penyambungan kabel optik menggunakan fusion splicer, pengupasan pelindung kabel, cleaving yang presisi, serta terminasi konektor (SC, LC, FC) dengan redaman minimal.
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-lg bg-gray-900 text-amber-400 text-xs font-medium border border-gray-800">Fusion Splicer</span>
+                        <span class="px-3 py-1 rounded-lg bg-gray-900 text-amber-400 text-xs font-medium border border-gray-800">Cleaver</span>
+                        <span class="px-3 py-1 rounded-lg bg-gray-900 text-amber-400 text-xs font-medium border border-gray-800">Optical Connector</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="glass-card p-8 rounded-3xl border border-gray-800 hover:border-cyan-500/50 transition duration-300 shadow-card-glow group">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-xl group-hover:bg-cyan-500 group-hover:text-white transition duration-300">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-cyan-400 font-semibold uppercase">Analisis & Perbaikan</span>
+                            <h3 class="text-xl font-bold text-white">Troubleshooting Jaringan Serat Optik</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Kemampuan mendiagnosis gangguan pada jaringan optik, pengecekan redaman menggunakan Optical Power Meter (OPM) dan Laser Source, serta pelacakan letak putus kabel menggunakan Visual Fault Locator (VFL).
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-lg bg-gray-900 text-cyan-400 text-xs font-medium border border-gray-800">OPM / VFL</span>
+                        <span class="px-3 py-1 rounded-lg bg-gray-900 text-cyan-400 text-xs font-medium border border-gray-800">Redaman (dBm)</span>
+                        <span class="px-3 py-1 rounded-lg bg-gray-900 text-cyan-400 text-xs font-medium border border-gray-800">Fault Tracing</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card 4 -->
+                <div class="glass-card p-8 rounded-3xl border border-gray-800 hover:border-amber-500/50 transition duration-300 shadow-card-glow group">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-500 text-xl group-hover:bg-amber-500 group-hover:text-white transition duration-300">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-amber-500 font-semibold uppercase">Fundamental TKJ</span>
+                            <h3 class="text-xl font-bold text-white">Dasar Komunikasi Data & Networking</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Pemahaman konsep dasar model OSI, pengalamatan IP (IPv4/IPv6), konfigurasi perangkat router dan switch dasar, serta pengoperasian perangkat jaringan berbasis kabel optik maupun tembaga.
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-lg bg-gray-900 text-amber-400 text-xs font-medium border border-gray-800">OSI Layer</span>
+                        <span class="px-3 py-1 rounded-lg bg-gray-900 text-amber-400 text-xs font-medium border border-gray-800">IP Addressing</span>
+                        <span class="px-3 py-1 rounded-lg bg-gray-900 text-amber-400 text-xs font-medium border border-gray-800">Router & Switch</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-cyan-400 font-semibold text-sm uppercase tracking-wider">Mari Terhubung</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Hubungi Saya</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyan-500 to-amber-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                <!-- Contact Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="glass-card p-8 rounded-3xl border border-gray-800 space-y-6 shadow-card-glow">
+                        <h3 class="text-2xl font-bold text-white">Informasi Kontak</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Tertarik untuk berdiskusi seputar dunia jaringan komputer, fiber optic, atau kolaborasi proyek? Jangan ragu untuk mengirimkan pesan.
+                        </p>
+
+                        <div class="space-y-4 pt-2">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 shrink-0">
+                                    <i class="fa-solid fa-user-graduate"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-gray-400 block font-medium">Nama</span>
+                                    <span class="text-white font-semibold">Raffa Putra Pratama</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500 shrink-0">
+                                    <i class="fa-solid fa-school"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-gray-400 block font-medium">Instansi</span>
+                                    <span class="text-white font-semibold">SMK 3 Perguruan Cikini</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-gray-400 block font-medium">Email</span>
+                                    <span class="text-white font-semibold">raffa.putra@student.smk3cikini.sch.id</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-gray-800 flex space-x-4">
+                            <a href="#contact" class="w-10 h-10 rounded-xl bg-gray-900 hover:bg-cyan-500/20 hover:text-cyan-400 text-gray-400 flex items-center justify-center transition border border-gray-800"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#contact" class="w-10 h-10 rounded-xl bg-gray-900 hover:bg-cyan-500/20 hover:text-cyan-400 text-gray-400 flex items-center justify-center transition border border-gray-800"><i class="fa-brands fa-github"></i></a>
+                            <a href="#contact" class="w-10 h-10 rounded-xl bg-gray-900 hover:bg-cyan-500/20 hover:text-cyan-400 text-gray-400 flex items-center justify-center transition border border-gray-800"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-7">
+                    <form id="contact-form" class="glass-card p-8 sm:p-10 rounded-3xl border border-gray-800 space-y-6 shadow-card-glow relative">
+                        <div id="form-success" class="hidden p-4 rounded-xl bg-green-500/20 border border-green-500/40 text-green-300 text-sm font-medium">
+                            <i class="fa-solid fa-circle-check mr-2"></i> Terima kasih! Pesan Anda telah berhasil dikirim. Raffa akan segera merespons.
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Nama Lengkap</label>
+                                <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-800 text-white focus:outline-none focus:border-cyan-500 transition" placeholder="Masukkan nama Anda">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                                <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-800 text-white focus:outline-none focus:border-cyan-500 transition" placeholder="email@domain.com">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Subjek</label>
+                            <input type="text" id="subject" required class="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-800 text-white focus:outline-none focus:border-cyan-500 transition" placeholder="Perihal pesan">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Pesan</label>
+                            <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-xl bg-gray-900 border border-gray-800 text-white focus:outline-none focus:border-cyan-500 transition resize-none" placeholder="Tuliskan pesan atau pertanyaan Anda di sini..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold shadow-neon-cyan transition transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-paper-plane mr-2"></i> Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-950 border-t border-gray-900 text-center text-gray-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p>&copy; 2026 Raffa Putra Pratama. SMK 3 Perguruan Cikini - Teknik Komputer dan Jaringan.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact form submission handling (No alert())
+        const contactForm = document.getElementById('contact-form');
+        const formSuccess = document.getElementById('form-success');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formSuccess.classList.remove('hidden');
+            contactForm.reset();
+            setTimeout(() => {
+                formSuccess.classList.add('hidden');
+            }, 5000);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-xl', 'bg-gray-950/90');
+            } else {
+                header.classList.remove('shadow-xl', 'bg-gray-950/90');
+            }
+        });
+    </script>
+</body>
+</html>
